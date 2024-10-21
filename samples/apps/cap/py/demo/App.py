@@ -5,7 +5,7 @@ Demo App
 import argparse
 
 import _paths
-import autogencap.Config as Config
+import autogencap.config as Config
 import autogencap.DebugLog as DebugLog
 from AGDemo import ag_demo
 from AGGroupChatDemo import ag_groupchat_demo

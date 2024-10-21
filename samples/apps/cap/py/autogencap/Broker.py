@@ -3,7 +3,7 @@ import time
 
 import zmq
 
-from autogencap.Config import router_url, xpub_url, xsub_url
+from autogencap.config import router_url, xpub_url, xsub_url
 from autogencap.DebugLog import Debug, Info, Warn
 
 

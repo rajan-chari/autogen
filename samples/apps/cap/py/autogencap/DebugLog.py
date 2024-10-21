@@ -3,7 +3,7 @@ import threading
 
 from termcolor import colored
 
-import autogencap.Config as Config
+import autogencap.config as Config
 
 # Define log levels as constants
 DEBUG = 0
@@ -34,7 +34,7 @@ class BaseLogger:
 
 
 class ConsoleLogger(BaseLogger):
-    def __init__(self, use_color=True):
+    def __init__(self, use_color=Config.USE_COLOR_LOGGING):
         super().__init__()
         self._use_color = use_color
 
@@ -56,6 +56,7 @@ class ConsoleLogger(BaseLogger):
         print(f"{thread_id} {timestamp} {level_name}: [{context}] {msg}")
 
 
+# Modify this line to disable color logging by default
 LOGGER = ConsoleLogger()
 
 
