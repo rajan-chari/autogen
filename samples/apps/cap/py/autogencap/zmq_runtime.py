@@ -4,14 +4,14 @@ from typing import List
 import zmq
 
 from .Actor import Actor
-from .actor_runtime import IRuntime, IMessageReceiver
+from .actor_connector import IActorConnector
+from .actor_runtime import IMessageReceiver, IRuntime
 from .Broker import Broker
 from .constants import Termination_Topic
 from .DebugLog import Debug, Warn
-from .zmq_directory_svc import ZMQDirectorySvc
 from .proto.CAP_pb2 import ActorInfo, ActorInfoCollection
-from .actor_connector import IActorConnector
 from .zmq_actor_connector import ZMQActorConnector
+from .zmq_directory_svc import ZMQDirectorySvc
 
 
 class ZMQRuntime(IRuntime):
@@ -50,6 +50,7 @@ local_actors: {self.local_actors}\n"
 
     def get_new_msg_receiver(self) -> IMessageReceiver:
         from .zmq_msg_receiver import ZMQMsgReceiver
+
         return ZMQMsgReceiver(self._context)
 
     def connect(self):

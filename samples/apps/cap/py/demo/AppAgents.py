@@ -5,8 +5,8 @@ to retrieve information.
 """
 
 from autogencap.Actor import Actor
-from autogencap.actor_runtime import IRuntime
 from autogencap.actor_connector import IActorConnector
+from autogencap.actor_runtime import IRuntime
 from autogencap.DebugLog import Debug, Info, shorten
 from autogencap.runtime_factory import RuntimeFactory
 

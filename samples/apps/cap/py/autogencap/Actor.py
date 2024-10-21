@@ -1,7 +1,9 @@
 import threading
 import traceback
-from .actor_runtime import IMsgActor, IRuntime, IMessageReceiver
+
+from .actor_runtime import IMessageReceiver, IMsgActor, IRuntime
 from .DebugLog import Debug, Info
+
 
 class Actor(IMsgActor):
     def __init__(self, agent_name: str, description: str, start_thread: bool = True):
