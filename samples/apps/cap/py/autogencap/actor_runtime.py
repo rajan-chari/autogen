@@ -6,6 +6,9 @@ from .proto.CAP_pb2 import ActorInfo
 
 
 class IMsgActor(ABC):
+    """
+    An abstract base class that defines the interface for message based actors.
+    """
     @abstractmethod
     def on_connect(self, runtime: "IRuntime"):
         """Called when the actor connects to the runtime."""
@@ -39,6 +42,9 @@ class IMsgActor(ABC):
 
 # Abstract base class for message receivers
 class IMessageReceiver(ABC):
+    """
+    An abstract base class that defines the interface for message receivers.
+    """
     @abstractmethod
     def init(self, actor_name: str):
         """Initialize the message receiver."""
@@ -62,6 +68,9 @@ class IMessageReceiver(ABC):
 
 # Abstract base class for the runtime environment
 class IRuntime(ABC):
+    """
+    An abstract base class that defines the interface for the actor runtime environment.
+    """
     @abstractmethod
     def register(self, actor: IMsgActor):
         """Register an actor with the runtime."""
