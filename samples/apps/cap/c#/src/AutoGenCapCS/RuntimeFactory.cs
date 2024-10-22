@@ -20,5 +20,4 @@ namespace AutoGenCapCS
             return new ZMQRuntime();
         }
     }
-    }
 }
