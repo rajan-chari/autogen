@@ -17,6 +17,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="MessageReceiver.cs" />
     <Compile Include="Runtime.cs" />
+    <Compile Include="RuntimeFactory.cs" />
     <Compile Include="ActorConnector.cs" />
     <Compile Include="IMessageReceiver.cs" />
     <Compile Include="IMsgActor.cs" />
