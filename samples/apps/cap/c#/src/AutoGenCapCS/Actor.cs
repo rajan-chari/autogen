@@ -9,12 +9,12 @@ namespace AutoGenCapCS
             Console.WriteLine("Connected."); 
         }
 
-        public void OnTxtMsg(string message) 
+        public void OnTxtMsg(string message, string msgType, string receiver, string sender) 
         { 
             Console.WriteLine($"Text message received: {message}"); 
         }
 
-        public void OnBinMsg(byte[] message) 
+        public void OnBinMsg(byte[] message, string msgType, string receiver, string sender) 
         { 
             Console.WriteLine($"Binary message received: {BitConverter.ToString(message)}"); 
         }
