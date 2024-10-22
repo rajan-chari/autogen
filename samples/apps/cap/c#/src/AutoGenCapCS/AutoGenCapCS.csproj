@@ -16,6 +16,10 @@
     <Compile Include="MessageReceiver.cs" />
     <Compile Include="Runtime.cs" />
     <Compile Include="ActorConnector.cs" />
+    <Compile Include="IMessageReceiver.cs" />
+    <Compile Include="IMsgActor.cs" />
+    <Compile Include="IRuntime.cs" />
+    <Compile Include="IActorConnector.cs" />
   </ItemGroup>
 
 </Project>
