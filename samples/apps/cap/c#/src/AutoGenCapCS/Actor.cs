@@ -1,7 +1,14 @@
 namespace AutoGenCapCS
 {
-    public class Actor
+    public class Actor : IMsgActor
     {
-        // Implementation of Actor class
+        public void OnConnect() { /* Implementation */ }
+        public void OnTxtMsg(string message) { /* Implementation */ }
+        public void OnBinMsg(byte[] message) { /* Implementation */ }
+        public void DispatchMessage() { /* Implementation */ }
+        public string GetMessage() { /* Implementation */ return ""; }
+        public void OnStart() { /* Implementation */ }
+        public void DisconnectNetwork() { /* Implementation */ }
+        public void Stop() { /* Implementation */ }
     }
 }

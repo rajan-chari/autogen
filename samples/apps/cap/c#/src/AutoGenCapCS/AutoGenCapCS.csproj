@@ -11,4 +11,11 @@
     <PackageReference Include="NetMQ" Version="4.0.1.13" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="Actor.cs" />
+    <Compile Include="MessageReceiver.cs" />
+    <Compile Include="Runtime.cs" />
+    <Compile Include="ActorConnector.cs" />
+  </ItemGroup>
+
 </Project>
