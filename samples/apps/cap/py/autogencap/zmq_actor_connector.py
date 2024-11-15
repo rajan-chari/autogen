@@ -14,9 +14,16 @@ class ZMQActorSender:
     def __init__(self, context, topic):
         self._context = context
         self._topic = topic
+        self._pub_socket = None
         self._connect_pub_socket()
 
     def _connect_pub_socket(self):
+        if self._pub_socket:
+            try:
+                self._pub_socket.close()
+            except Exception:
+                pass
+            
         Debug("ActorSender", f"Connecting pub socket {self._topic}")
         self._pub_socket = self._context.socket(zmq.PUB)
         monitor = self._pub_socket.get_monitor_socket()
@@ -68,7 +75,12 @@ class ZMQActorSender:
         )
 
     def close(self):
-        self._pub_socket.close()
+        if self._pub_socket:
+            try:
+                self._pub_socket.close()
+            except Exception:
+                pass
+            self._pub_socket = None
 
 
 class ZMQActorConnector(IActorConnector):
